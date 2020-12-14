@@ -16,9 +16,11 @@
 ・ブレッドボード  
 
 # 回路
-![回路](https://imgur.com/a/yXEK7Du)
+![回路](https://imgur.com/7kY2hSa)
 # 実行方法
+
 インストール  
+git clone https://github.com/Kenta-Akiyama/Robosys2020_roulette.git  
 $ make  
 $ cd Robosys_Devicedriver/myled  
 $ sudo insmod myled.ko  
@@ -26,7 +28,7 @@ $ sudo chmod 666 /dev/myled0
 
 ルーレット開始  
 echo 0 > /dev/mydev0  
-LED消灯、止まるまでの値再設定
+LED消灯、止まるまでの値再設定  
 echo 1 > /dev/mydev0  
 
 
