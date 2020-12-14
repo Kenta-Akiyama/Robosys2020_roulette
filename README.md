@@ -16,20 +16,23 @@
 ・ブレッドボード  
 
 # 回路
-![回路](https://imgur.com/7kY2hSa)
+![回路](https://imgur.com/gallery/yXEK7Du)  
+
+LEDはGPIO 21,20,16,12,26 の順で光ります。  
+スピーカーは必ず１９につないでください。  
 # 実行方法
 
 インストール  
-git clone https://github.com/Kenta-Akiyama/Robosys2020_roulette.git  
-$ make  
-$ cd Robosys_Devicedriver/myled  
-$ sudo insmod myled.ko  
-$ sudo chmod 666 /dev/myled0  
+>git clone https://github.com/Kenta-Akiyama/Robosys2020_roulette.git  
+>$ cd Robosys_Devicedriver/myled  
+>$ make
+>$ sudo insmod myled.ko  
+>$ sudo chmod 666 /dev/myled0  
 
 ルーレット開始  
-echo 0 > /dev/mydev0  
+>echo 0 > /dev/mydev0  
 LED消灯、止まるまでの値再設定  
-echo 1 > /dev/mydev0  
+>echo 1 > /dev/mydev0  
 
 
 # 動画
