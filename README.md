@@ -26,10 +26,10 @@ LEDはGPIO 21,20,16,12,26 の順で光ります。
 インストール  
 ```
 $ git clone https://github.com/Kenta-Akiyama/Robosys2020_roulette.git  
-$ cd Robosys_Devicedriver/myled  
+$ cd Robosys2020_roulette  
 $ make  
-$ sudo insmod myled.ko  
-$ sudo chmod 666 /dev/myled0  
+$ sudo insmod mydev.ko  
+$ sudo chmod 666 /dev/mydev0  
 ```
 
 ルーレット開始  
@@ -37,7 +37,7 @@ $ sudo chmod 666 /dev/myled0
 echo 0 > /dev/mydev0  
 ```
 
-LED消灯、止まるまでの値再設定  
+LED消灯、ルーレットが止まるまでの値再設定  
 ```
 echo 1 > /dev/mydev0  
 ```
