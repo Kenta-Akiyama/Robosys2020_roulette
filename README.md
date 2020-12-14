@@ -24,7 +24,14 @@ $ cd Robosys_Devicedriver/myled
 $ sudo insmod myled.ko  
 $ sudo chmod 666 /dev/myled0  
 
+ルーレット開始  
+echo 0 > /dev/mydev0  
+LED消灯、止まるまでの値再設定
+echo 1 > /dev/mydev0  
+
+
 # 動画
 ・ Youtube  
 [![](https://img.youtube.com/vi/Mp_nhySBATs/0.jpg)](https://www.youtube.com/watch?v=Mp_nhySBATs)  
 # ライセンス
+GNU General Public License v3.0  
