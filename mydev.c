@@ -18,7 +18,7 @@ static struct cdev cdv;
 static struct class *cls = NULL;
 static volatile u32 *gpio_base = NULL;
 
-int n = 50; //乱数
+int n = 50;
 int l = 0;
 static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_t* pos){
 
