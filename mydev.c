@@ -19,20 +19,19 @@ static struct class *cls = NULL;
 static volatile u32 *gpio_base = NULL;
 
 int n = 50; //乱数
-
+int l = 0;
 static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_t* pos){
 
 	char c;
 	int j;
 	int k;
-	int l = 1;
 	int x = 0;
 
 	if(copy_from_user(&c, buf, sizeof(char)))
 	return -EFAULT;
 
 
-	if(c == "0"){
+	if(c == '0'){
 		for(j = 0; j < n; j++){
 
 			gpio_base[7] = 1 << pin[x];
@@ -72,8 +71,8 @@ static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_
 		l++;
 		}
 	}
-	if(j == 21){
-		j = 1;
+	if(l == 21){
+		l = 1;
 }
 	return 1;
 }
