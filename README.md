@@ -16,7 +16,7 @@
 ・ブレッドボード  
 
 # 回路
-
+![回路](https://imgur.com/a/yXEK7Du)
 # 実行方法
 インストール  
 $ make  
@@ -26,5 +26,5 @@ $ sudo chmod 666 /dev/myled0
 
 # 動画
 ・ Youtube  
-<https://youtu.be/Mp_nhySBATs>  
+[![](https://img.youtube.com/vi/Mp_nhySBATs/0.jpg)](https://www.youtube.com/watch?v=Mp_nhySBATs)  
 # ライセンス
