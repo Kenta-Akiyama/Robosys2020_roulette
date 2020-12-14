@@ -12,6 +12,7 @@ MODULE_LICENSE("GPL");
 MODULE_VERSION("1.0.0");
 
 const u32 pin[6] = {21, 20, 16, 12, 26, 19}; //21,20,16,12,26はLED 19はスピーカー
+char pi[21] = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, 4, 6};
 static dev_t dev;
 static struct cdev cdv;
 static struct class *cls = NULL;
@@ -24,14 +25,14 @@ static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_
 	char c;
 	int j;
 	int k;
+	int l = 1;
 	int x = 0;
 
 	if(copy_from_user(&c, buf, sizeof(char)))
 	return -EFAULT;
 
 
-	if(c == '0'){
-
+	if(c == "0"){
 		for(j = 0; j < n; j++){
 
 			gpio_base[7] = 1 << pin[x];
@@ -62,7 +63,18 @@ static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_
 		for(j = 0; j <=5; j++){
 			gpio_base[10] = 1 << pin[j];
 			}
+		if( n > 60){
+		n = n - pi[l];
+		l++;
+		}
+		else if(n <= 60){
+		n = n + pi[l];
+		l++;
+		}
 	}
+	if(j == 21){
+		j = 1;
+}
 	return 1;
 }
 
